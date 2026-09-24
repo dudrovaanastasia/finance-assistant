@@ -1,6 +1,8 @@
+from models.category import Category
 from models.transaction import Transaction
 
-# Пример использования
 if __name__ == "__main__":
-    t1 = Transaction(100, "Food", "2023-10-25")
+    food_category = Category("Food", "Expenses for groceries and restaurants")
+    t1 = Transaction(100, food_category.name, "2023-10-25")
+    print(food_category)
     print(t1)
